@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Inicio de Sesión</h1>
+        <form id="login-form">
+            <input type="text" id="username" placeholder="Usuario" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+    </div>
+
+    <div id="gastos-section" class="hidden">
+        <h2>Bienvenido, <span id="user-name"></span></h2>
+        <form id="gastos-form">
+            <label for="mes">Mes:</label>
+            <select id="mes" required>
+                <option value="Enero">Enero</option>
+                <option value="Febrero">Febrero</option>
+                <option value="Marzo">Marzo</option>
+                <option value="Abril">Abril</option>
+                <option value="Mayo">Mayo</option>
+                <option value="Junio">Junio</option>
+                <option value="Julio">Julio</option>
+                <option value="Agosto">Agosto</option>
+                <option value="Septiembre">Septiembre</option>
+                <option value="Octubre">Octubre</option>
+                <option value="Noviembre">Noviembre</option>
+                <option value="Diciembre">Diciembre</option>
+            </select>
+
+            <label for="arriendo">Arriendo:</label>
+            <input type="number" id="arriendo" placeholder="$" required>
+
+            <label for="servicios">Servicios:</label>
+            <input type="number" id="servicios" placeholder="$" required>
+
+            <label for="comida">Comida (Semanal):</label>
+            <input type="number" id="comida" placeholder="$" required>
+
+            <button type="submit">Guardar Gastos</button>
+        </form>
+
+        <div id="result"></div>
+        
+        <button id="logout-btn">Cerrar Sesión</button>
+    </div>
+
+    <div id="totales-anuales" class="hidden">
+        <h2>Totales Anuales</h2>
+        <div id="total-anual"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
