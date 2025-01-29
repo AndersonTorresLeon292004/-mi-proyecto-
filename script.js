@@ -1,3 +1,4 @@
+
 document.getElementById("login-form").addEventListener("submit", function(event) {
     event.preventDefault();
     let username = document.getElementById("username").value.trim().toLowerCase();
@@ -30,6 +31,8 @@ document.getElementById("gastos-form").addEventListener("submit", function(event
     let arriendo = parseFloat(document.getElementById("arriendo").value);
     let servicios = parseFloat(document.getElementById("servicios").value);
     let comida = parseFloat(document.getElementById("comida").value);
+
+    console.log("Guardando gastos", mes, arriendo, servicios, comida);
 
     let totalSemanal = comida;
     let totalMensual = arriendo + servicios + (comida * 4);
@@ -88,8 +91,8 @@ function displayStoredData() {
                 <td>$${formatNumber(gastos.comida)}</td>
                 <td>$${formatNumber(gastos.totalMensual)}</td>
                 <td>
-                    <button onclick="editData(${index})">Editar</button>
-                    <button onclick="deleteData(${index})">Eliminar</button>
+                    <button class="edit-button" onclick="editData(${index})">Editar</button>
+                    <button class="delete-button" onclick="deleteData(${index})">Eliminar</button>
                 </td>
             </tr>`;
     });
